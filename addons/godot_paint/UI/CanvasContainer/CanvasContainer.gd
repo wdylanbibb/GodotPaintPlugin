@@ -16,7 +16,7 @@ func load_from_path(path: String):
 
 func create_empty(image_size: Vector2i):
 	var i = Image.new()
-	i.create(image_size.x, image_size.y, true, Image.Format_RGBA8)
+	i.create(image_size.x, image_size.y, true, Image.FORMAT_RGBA8)
 	
 	_image = i
 	
