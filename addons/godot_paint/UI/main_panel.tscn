@@ -20,7 +20,7 @@
 [ext_resource type="Script" path="res://addons/godot_paint/UI/CanvasParent.gd" id="14_yffdd"]
 [ext_resource type="Script" path="res://addons/godot_paint/UI/Dialogs/DialogNewFileDialog.gd" id="18_hujp7"]
 
-[sub_resource type="Image" id="Image_n0pvt"]
+[sub_resource type="Image" id="Image_ncch8"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 93, 93, 55, 255, 97, 97, 58, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 97, 97, 42, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 98, 98, 47, 255, 97, 97, 42, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 93, 93, 233, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 94, 94, 46, 255, 93, 93, 236, 255, 93, 93, 233, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -29,10 +29,10 @@ data = {
 "width": 16
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_dhwgv"]
-image = SubResource("Image_n0pvt")
+[sub_resource type="ImageTexture" id="ImageTexture_hu386"]
+image = SubResource("Image_ncch8")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmp6c"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enofh"]
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
@@ -56,7 +56,7 @@ keycode = 73
 [sub_resource type="Shortcut" id="Shortcut_x0q1a"]
 events = [SubResource("InputEventKey_ed4nv")]
 
-[node name="MainPanel" type="MarginContainer"]
+[node name="MainPanel" type="PanelContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -64,25 +64,22 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
 script = ExtResource("1_368gf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-offset_left = 4.0
-offset_right = 1148.0
-offset_bottom = 644.0
+offset_right = 1152.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NavBar" type="MenuBar" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_right = 1144.0
+offset_right = 1152.0
 offset_bottom = 31.0
 flat = true
+prefer_global_menu = false
 script = ExtResource("2_v5odr")
 
 [node name="File" type="PopupMenu" parent="VBoxContainer/NavBar"]
@@ -182,20 +179,20 @@ script = ExtResource("7_oh5o3")
 [node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer"]
 layout_mode = 2
 offset_top = 35.0
-offset_right = 1144.0
-offset_bottom = 611.0
+offset_right = 1152.0
+offset_bottom = 615.0
 size_flags_vertical = 3
 split_offset = 150
 
 [node name="LeftPanel" type="VSplitContainer" parent="VBoxContainer/HSplitContainer"]
 layout_mode = 2
 offset_right = 150.0
-offset_bottom = 576.0
+offset_bottom = 580.0
 
 [node name="FileDisplay" type="VBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel"]
 layout_mode = 2
 offset_right = 150.0
-offset_bottom = 282.0
+offset_bottom = 284.0
 size_flags_vertical = 3
 script = ExtResource("2_dgfga")
 
@@ -204,22 +201,24 @@ layout_mode = 2
 offset_right = 150.0
 offset_bottom = 31.0
 placeholder_text = "Filter Files"
-right_icon = SubResource("ImageTexture_dhwgv")
+right_icon = SubResource("ImageTexture_hu386")
+caret_blink = true
+caret_blink_interval = 0.5
 script = ExtResource("2_nc4te")
 
 [node name="FileList" type="ItemList" parent="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay"]
 layout_mode = 2
 offset_top = 35.0
 offset_right = 150.0
-offset_bottom = 282.0
+offset_bottom = 284.0
 size_flags_vertical = 3
 
 [node name="PaletteContainer" type="VBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_top = 294.0
+offset_top = 296.0
 offset_right = 150.0
-offset_bottom = 576.0
+offset_bottom = 580.0
 size_flags_vertical = 3
 
 [node name="PaletteCommands" type="PanelContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer"]
@@ -240,52 +239,52 @@ offset_bottom = 24.0
 layout_mode = 2
 offset_right = 24.0
 offset_bottom = 24.0
-icon = SubResource("ImageTexture_dhwgv")
+icon = SubResource("ImageTexture_hu386")
 
 [node name="DuplicateColor" type="Button" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands/HBoxContainer"]
 layout_mode = 2
 offset_left = 28.0
 offset_right = 52.0
 offset_bottom = 24.0
-icon = SubResource("ImageTexture_dhwgv")
+icon = SubResource("ImageTexture_hu386")
 
 [node name="DeleteColor" type="Button" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands/HBoxContainer"]
 layout_mode = 2
 offset_left = 56.0
 offset_right = 80.0
 offset_bottom = 24.0
-icon = SubResource("ImageTexture_dhwgv")
+icon = SubResource("ImageTexture_hu386")
 
 [node name="Options" type="MenuButton" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands/HBoxContainer"]
 layout_mode = 2
 offset_left = 84.0
 offset_right = 108.0
 offset_bottom = 24.0
-icon = SubResource("ImageTexture_dhwgv")
+icon = SubResource("ImageTexture_hu386")
 flat = false
 
 [node name="Palette" type="PanelContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 offset_right = 150.0
-offset_bottom = 222.0
+offset_bottom = 224.0
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_rmp6c")
+theme_override_styles/panel = SubResource("StyleBoxFlat_enofh")
 script = ExtResource("4_hkfg1")
 
 [node name="HFlowContainer" type="HFlowContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Palette"]
 layout_mode = 2
 offset_right = 150.0
-offset_bottom = 222.0
+offset_bottom = 224.0
 size_flags_vertical = 3
 
 [node name="Colors" type="PanelContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_top = 226.0
+offset_top = 228.0
 offset_right = 150.0
-offset_bottom = 282.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_rmp6c")
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_enofh")
 script = ExtResource("4_y7t8d")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors"]
@@ -313,7 +312,7 @@ offset_right = 150.0
 offset_bottom = 26.0
 tooltip_text = "Add foreground color to palette"
 focus_mode = 0
-icon = SubResource("ImageTexture_dhwgv")
+icon = SubResource("ImageTexture_hu386")
 flat = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer"]
@@ -337,20 +336,20 @@ offset_right = 150.0
 offset_bottom = 26.0
 tooltip_text = "Add background color to palette"
 focus_mode = 0
-icon = SubResource("ImageTexture_dhwgv")
+icon = SubResource("ImageTexture_hu386")
 flat = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HSplitContainer"]
 layout_mode = 2
 offset_left = 162.0
-offset_right = 1144.0
-offset_bottom = 576.0
+offset_right = 1152.0
+offset_bottom = 580.0
 size_flags_horizontal = 3
 
 [node name="CanvasParent" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/HBoxContainer"]
 layout_mode = 2
-offset_right = 954.0
-offset_bottom = 576.0
+offset_right = 962.0
+offset_bottom = 580.0
 size_flags_horizontal = 3
 script = ExtResource("14_yffdd")
 
@@ -359,26 +358,26 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_right = 954.0
-offset_bottom = 576.0
+offset_right = 962.0
+offset_bottom = 580.0
 grow_horizontal = 1
 grow_vertical = 1
 
 [node name="Toolbar" type="PanelContainer" parent="VBoxContainer/HSplitContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = 958.0
-offset_right = 982.0
-offset_bottom = 576.0
+offset_left = 966.0
+offset_right = 990.0
+offset_bottom = 580.0
 size_flags_horizontal = 10
 size_flags_stretch_ratio = 0.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_rmp6c")
+theme_override_styles/panel = SubResource("StyleBoxFlat_enofh")
 script = ExtResource("5_a2ehg")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HSplitContainer/HBoxContainer/Toolbar"]
 layout_mode = 2
 offset_right = 24.0
-offset_bottom = 576.0
+offset_bottom = 580.0
 
 [node name="Brush" type="Button" parent="VBoxContainer/HSplitContainer/HBoxContainer/Toolbar/VBoxContainer"]
 layout_mode = 2
@@ -390,7 +389,7 @@ toggle_mode = true
 action_mode = 0
 shortcut = SubResource("Shortcut_u3h01")
 button_group = ExtResource("3_xyxex")
-icon = SubResource("ImageTexture_dhwgv")
+icon = SubResource("ImageTexture_hu386")
 flat = true
 
 [node name="Eyedropper" type="Button" parent="VBoxContainer/HSplitContainer/HBoxContainer/Toolbar/VBoxContainer"]
@@ -404,21 +403,21 @@ toggle_mode = true
 action_mode = 0
 shortcut = SubResource("Shortcut_x0q1a")
 button_group = ExtResource("3_xyxex")
-icon = SubResource("ImageTexture_dhwgv")
+icon = SubResource("ImageTexture_hu386")
 flat = true
 
 [node name="InfoBar" type="HBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2i(0, 29)
 layout_mode = 2
-offset_top = 615.0
-offset_right = 1144.0
-offset_bottom = 644.0
+offset_top = 619.0
+offset_right = 1152.0
+offset_bottom = 648.0
 script = ExtResource("4_xpiy2")
 
 [node name="MousePosition" type="HBoxContainer" parent="VBoxContainer/InfoBar"]
 layout_mode = 2
-offset_right = 566.0
+offset_right = 570.0
 offset_bottom = 29.0
 size_flags_horizontal = 3
 
@@ -426,7 +425,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 offset_right = 16.0
 offset_bottom = 29.0
-texture = SubResource("ImageTexture_dhwgv")
+texture = SubResource("ImageTexture_hu386")
 stretch_mode = 5
 
 [node name="MousePositionLabel" type="Label" parent="VBoxContainer/InfoBar/MousePosition"]
@@ -439,14 +438,14 @@ vertical_alignment = 1
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/InfoBar"]
 layout_mode = 2
-offset_left = 570.0
-offset_right = 574.0
+offset_left = 574.0
+offset_right = 578.0
 offset_bottom = 29.0
 
 [node name="ImageSize" type="HBoxContainer" parent="VBoxContainer/InfoBar"]
 layout_mode = 2
-offset_left = 578.0
-offset_right = 1144.0
+offset_left = 582.0
+offset_right = 1152.0
 offset_bottom = 29.0
 size_flags_horizontal = 3
 
@@ -454,7 +453,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 offset_right = 16.0
 offset_bottom = 29.0
-texture = SubResource("ImageTexture_dhwgv")
+texture = SubResource("ImageTexture_hu386")
 stretch_mode = 5
 
 [node name="ImageSizeLabel" type="Label" parent="VBoxContainer/InfoBar/ImageSize"]
@@ -539,11 +538,12 @@ max_value = 16384.0
 value = 1.0
 
 [connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay" method="_on_settings_changed"]
-[connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay/FileSearch" method="_on_settings_changed"]
 [connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay/FileSearch" method="_on_main_panel_settings_changed"]
+[connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay/FileSearch" method="_on_settings_changed"]
 [connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands" method="_on_settings_changed"]
 [connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Palette" method="_on_settings_changed"]
 [connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors" method="_on_settings_changed"]
+[connection signal="settings_changed" from="." to="." method="_on_settings_changed"]
 [connection signal="id_pressed" from="VBoxContainer/NavBar/File" to="VBoxContainer/NavBar/File" method="_on_id_pressed"]
 [connection signal="new_file" from="VBoxContainer/NavBar/File" to="VBoxContainer/NavBar" method="_on_new_file"]
 [connection signal="text_changed" from="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay/FileSearch" to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay" method="_on_file_search_text_changed"]
