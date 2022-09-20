@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv4p5p4htj4h2"]
+
+[ext_resource type="Script" path="res://addons/godot-plugin-refresher/plugin_refresher.gd" id="1"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+script = ExtResource("1")
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+offset_right = 4.0
+offset_bottom = 20.0
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 2
+offset_left = 8.0
+offset_right = 22.0
+offset_bottom = 20.0
+
+[node name="RefreshButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 26.0
+offset_right = 34.0
+offset_bottom = 20.0
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+dialog_autowrap = true
+
+[connection signal="pressed" from="RefreshButton" to="." method="_on_RefreshButton_pressed"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]

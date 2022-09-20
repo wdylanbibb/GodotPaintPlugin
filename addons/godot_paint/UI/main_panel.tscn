@@ -1,0 +1,558 @@
+[gd_scene load_steps=27 format=3 uid="uid://036sv0vch5rm"]
+
+[ext_resource type="Script" path="res://addons/godot_paint/UI/MainPanel.gd" id="1_368gf"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/NavBar/File.gd" id="2_3ge2w"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/FileDisplay.gd" id="2_dgfga"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/FileSearch.gd" id="2_nc4te"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/PaletteCommands.gd" id="2_o2vun"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/NavBar.gd" id="2_v5odr"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/NavBar/Edit.gd" id="3_iyi7r"]
+[ext_resource type="ButtonGroup" uid="uid://xd27tahk0mgq" path="res://addons/godot_paint/UI/ToolButtonGroup.tres" id="3_xyxex"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/Palette.gd" id="4_hkfg1"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/NavBar/Sprite.gd" id="4_q30pn"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/InfoBar.gd" id="4_xpiy2"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/Colors.gd" id="4_y7t8d"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/NavBar/Select.gd" id="5_5slyk"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/Toolbar.gd" id="5_a2ehg"]
+[ext_resource type="PackedScene" uid="uid://chmoybyjspees" path="res://addons/godot_paint/UI/CanvasContainer/CanvasContainer.tscn" id="5_jlrx4"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/NavBar/View.gd" id="6_3wbvq"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/NavBar/Help.gd" id="7_oh5o3"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/CanvasParent.gd" id="14_yffdd"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/Dialogs/DialogNewFileDialog.gd" id="18_hujp7"]
+
+[sub_resource type="Image" id="Image_n0pvt"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 93, 93, 55, 255, 97, 97, 58, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 97, 97, 42, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 98, 98, 47, 255, 97, 97, 42, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 93, 93, 233, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 94, 94, 46, 255, 93, 93, 236, 255, 93, 93, 233, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_dhwgv"]
+image = SubResource("Image_n0pvt")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmp6c"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="InputEventKey" id="InputEventKey_76fx8"]
+keycode = 87
+
+[sub_resource type="Shortcut" id="Shortcut_u3h01"]
+events = [SubResource("InputEventKey_76fx8")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ed4nv"]
+keycode = 73
+
+[sub_resource type="Shortcut" id="Shortcut_x0q1a"]
+events = [SubResource("InputEventKey_ed4nv")]
+
+[node name="MainPanel" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+script = ExtResource("1_368gf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 1148.0
+offset_bottom = 644.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavBar" type="MenuBar" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_right = 1144.0
+offset_bottom = 31.0
+flat = true
+script = ExtResource("2_v5odr")
+
+[node name="File" type="PopupMenu" parent="VBoxContainer/NavBar"]
+size = Vector2i(100, 147)
+item_count = 7
+item_0/text = "New"
+item_0/id = 0
+item_1/text = "Load"
+item_1/id = 1
+item_2/text = ""
+item_2/id = 2
+item_2/separator = true
+item_3/text = "Save"
+item_3/id = 3
+item_4/text = "Save As"
+item_4/id = 4
+item_5/text = "Close"
+item_5/id = 5
+item_6/text = "Close All"
+item_6/id = 6
+script = ExtResource("2_3ge2w")
+
+[node name="Edit" type="PopupMenu" parent="VBoxContainer/NavBar"]
+item_count = 10
+item_0/text = "Undo"
+item_0/id = 0
+item_1/text = "Redo"
+item_1/id = 1
+item_2/text = ""
+item_2/id = 2
+item_2/separator = true
+item_3/text = "Cut"
+item_3/id = 3
+item_4/text = "Copy"
+item_4/id = 4
+item_5/text = "Paste"
+item_5/id = 5
+item_6/text = "Delete"
+item_6/id = 6
+item_7/text = ""
+item_7/id = 7
+item_7/separator = true
+item_8/text = "Keyboard Shortcuts"
+item_8/id = 8
+item_9/text = "Preferences"
+item_9/id = 9
+script = ExtResource("3_iyi7r")
+
+[node name="Sprite" type="PopupMenu" parent="VBoxContainer/NavBar"]
+item_count = 6
+item_0/text = "Properties"
+item_0/id = 0
+item_1/text = ""
+item_1/id = 1
+item_1/separator = true
+item_2/text = "Sprite Size"
+item_2/id = 2
+item_3/text = "Canvas Size"
+item_3/id = 3
+item_4/text = "Rotate Canvas"
+item_4/id = 4
+item_5/text = "Rotate"
+item_5/id = 5
+script = ExtResource("4_q30pn")
+
+[node name="Select" type="PopupMenu" parent="VBoxContainer/NavBar"]
+item_count = 3
+item_0/text = "All"
+item_0/id = 0
+item_1/text = "Deselect"
+item_1/id = 1
+item_2/text = "Inverse"
+item_2/id = 2
+script = ExtResource("5_5slyk")
+
+[node name="View" type="PopupMenu" parent="VBoxContainer/NavBar"]
+item_count = 2
+item_0/text = "Show Grid"
+item_0/id = 0
+item_1/text = "Grid Settings"
+item_1/id = 1
+script = ExtResource("6_3wbvq")
+
+[node name="Help" type="PopupMenu" parent="VBoxContainer/NavBar"]
+item_count = 4
+item_0/text = "About"
+item_0/id = 0
+item_1/text = ""
+item_1/id = 1
+item_1/separator = true
+item_2/text = "Source"
+item_2/id = 2
+item_3/text = "Twitter"
+item_3/id = 3
+script = ExtResource("7_oh5o3")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer"]
+layout_mode = 2
+offset_top = 35.0
+offset_right = 1144.0
+offset_bottom = 611.0
+size_flags_vertical = 3
+split_offset = 150
+
+[node name="LeftPanel" type="VSplitContainer" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 576.0
+
+[node name="FileDisplay" type="VBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 282.0
+size_flags_vertical = 3
+script = ExtResource("2_dgfga")
+
+[node name="FileSearch" type="LineEdit" parent="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 31.0
+placeholder_text = "Filter Files"
+right_icon = SubResource("ImageTexture_dhwgv")
+script = ExtResource("2_nc4te")
+
+[node name="FileList" type="ItemList" parent="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay"]
+layout_mode = 2
+offset_top = 35.0
+offset_right = 150.0
+offset_bottom = 282.0
+size_flags_vertical = 3
+
+[node name="PaletteContainer" type="VBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_top = 294.0
+offset_right = 150.0
+offset_bottom = 576.0
+size_flags_vertical = 3
+
+[node name="PaletteCommands" type="PanelContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_right = 108.0
+offset_bottom = 24.0
+size_flags_horizontal = 0
+script = ExtResource("2_o2vun")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands"]
+layout_mode = 2
+offset_right = 108.0
+offset_bottom = 24.0
+
+[node name="AddColor" type="Button" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands/HBoxContainer"]
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 24.0
+icon = SubResource("ImageTexture_dhwgv")
+
+[node name="DuplicateColor" type="Button" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands/HBoxContainer"]
+layout_mode = 2
+offset_left = 28.0
+offset_right = 52.0
+offset_bottom = 24.0
+icon = SubResource("ImageTexture_dhwgv")
+
+[node name="DeleteColor" type="Button" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands/HBoxContainer"]
+layout_mode = 2
+offset_left = 56.0
+offset_right = 80.0
+offset_bottom = 24.0
+icon = SubResource("ImageTexture_dhwgv")
+
+[node name="Options" type="MenuButton" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands/HBoxContainer"]
+layout_mode = 2
+offset_left = 84.0
+offset_right = 108.0
+offset_bottom = 24.0
+icon = SubResource("ImageTexture_dhwgv")
+flat = false
+
+[node name="Palette" type="PanelContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 222.0
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rmp6c")
+script = ExtResource("4_hkfg1")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Palette"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 222.0
+size_flags_vertical = 3
+
+[node name="Colors" type="PanelContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_top = 226.0
+offset_right = 150.0
+offset_bottom = 282.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rmp6c")
+script = ExtResource("4_y7t8d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 56.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 26.0
+
+[node name="ForegroundColorPicker" type="ColorPickerButton" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(0, 26)
+layout_mode = 2
+offset_right = 122.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+clip_text = true
+
+[node name="ForegroundAddColorButton" type="Button" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+offset_left = 126.0
+offset_right = 150.0
+offset_bottom = 26.0
+tooltip_text = "Add foreground color to palette"
+focus_mode = 0
+icon = SubResource("ImageTexture_dhwgv")
+flat = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer"]
+layout_mode = 2
+offset_top = 30.0
+offset_right = 150.0
+offset_bottom = 56.0
+
+[node name="BackgroundColorPicker" type="ColorPickerButton" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2i(0, 26)
+layout_mode = 2
+offset_right = 122.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+clip_text = true
+
+[node name="BackgroundAddColorButton" type="Button" parent="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+offset_left = 126.0
+offset_right = 150.0
+offset_bottom = 26.0
+tooltip_text = "Add background color to palette"
+focus_mode = 0
+icon = SubResource("ImageTexture_dhwgv")
+flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+offset_left = 162.0
+offset_right = 1144.0
+offset_bottom = 576.0
+size_flags_horizontal = 3
+
+[node name="CanvasParent" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+offset_right = 954.0
+offset_bottom = 576.0
+size_flags_horizontal = 3
+script = ExtResource("14_yffdd")
+
+[node name="CanvasContainer" parent="VBoxContainer/HSplitContainer/HBoxContainer/CanvasParent" instance=ExtResource("5_jlrx4")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 954.0
+offset_bottom = 576.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Toolbar" type="PanelContainer" parent="VBoxContainer/HSplitContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 958.0
+offset_right = 982.0
+offset_bottom = 576.0
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rmp6c")
+script = ExtResource("5_a2ehg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HSplitContainer/HBoxContainer/Toolbar"]
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 576.0
+
+[node name="Brush" type="Button" parent="VBoxContainer/HSplitContainer/HBoxContainer/Toolbar/VBoxContainer"]
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 24.0
+tooltip_text = "Brush"
+focus_mode = 0
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_u3h01")
+button_group = ExtResource("3_xyxex")
+icon = SubResource("ImageTexture_dhwgv")
+flat = true
+
+[node name="Eyedropper" type="Button" parent="VBoxContainer/HSplitContainer/HBoxContainer/Toolbar/VBoxContainer"]
+layout_mode = 2
+offset_top = 28.0
+offset_right = 24.0
+offset_bottom = 52.0
+tooltip_text = "Eyedropper"
+focus_mode = 0
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_x0q1a")
+button_group = ExtResource("3_xyxex")
+icon = SubResource("ImageTexture_dhwgv")
+flat = true
+
+[node name="InfoBar" type="HBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2i(0, 29)
+layout_mode = 2
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 644.0
+script = ExtResource("4_xpiy2")
+
+[node name="MousePosition" type="HBoxContainer" parent="VBoxContainer/InfoBar"]
+layout_mode = 2
+offset_right = 566.0
+offset_bottom = 29.0
+size_flags_horizontal = 3
+
+[node name="MouseIconTexture" type="TextureRect" parent="VBoxContainer/InfoBar/MousePosition"]
+layout_mode = 2
+offset_right = 16.0
+offset_bottom = 29.0
+texture = SubResource("ImageTexture_dhwgv")
+stretch_mode = 5
+
+[node name="MousePositionLabel" type="Label" parent="VBoxContainer/InfoBar/MousePosition"]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 26.0
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/InfoBar"]
+layout_mode = 2
+offset_left = 570.0
+offset_right = 574.0
+offset_bottom = 29.0
+
+[node name="ImageSize" type="HBoxContainer" parent="VBoxContainer/InfoBar"]
+layout_mode = 2
+offset_left = 578.0
+offset_right = 1144.0
+offset_bottom = 29.0
+size_flags_horizontal = 3
+
+[node name="SizeIconTexture" type="TextureRect" parent="VBoxContainer/InfoBar/ImageSize"]
+layout_mode = 2
+offset_right = 16.0
+offset_bottom = 29.0
+texture = SubResource("ImageTexture_dhwgv")
+stretch_mode = 5
+
+[node name="ImageSizeLabel" type="Label" parent="VBoxContainer/InfoBar/ImageSize"]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 26.0
+vertical_alignment = 1
+
+[node name="NewFileDialog" type="ConfirmationDialog" parent="."]
+title = "New File"
+position = Vector2i(421, 241)
+size = Vector2i(200, 161)
+unresizable = true
+script = ExtResource("18_hujp7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NewFileDialog"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 112.0
+
+[node name="Label" type="Label" parent="NewFileDialog/VBoxContainer"]
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 26.0
+text = "Size"
+
+[node name="HSeparator" type="HSeparator" parent="NewFileDialog/VBoxContainer"]
+layout_mode = 2
+offset_top = 30.0
+offset_right = 184.0
+offset_bottom = 34.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NewFileDialog/VBoxContainer"]
+layout_mode = 2
+offset_top = 38.0
+offset_right = 184.0
+offset_bottom = 69.0
+
+[node name="Label" type="Label" parent="NewFileDialog/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+offset_top = 2.0
+offset_right = 97.0
+offset_bottom = 28.0
+size_flags_horizontal = 3
+text = "Width"
+vertical_alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="NewFileDialog/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+offset_left = 101.0
+offset_right = 184.0
+offset_bottom = 31.0
+min_value = 1.0
+max_value = 16384.0
+value = 1.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="NewFileDialog/VBoxContainer"]
+layout_mode = 2
+offset_top = 73.0
+offset_right = 184.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="NewFileDialog/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+offset_top = 2.0
+offset_right = 97.0
+offset_bottom = 28.0
+size_flags_horizontal = 3
+text = "Height"
+vertical_alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="NewFileDialog/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+offset_left = 101.0
+offset_right = 184.0
+offset_bottom = 31.0
+min_value = 1.0
+max_value = 16384.0
+value = 1.0
+
+[connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay" method="_on_settings_changed"]
+[connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay/FileSearch" method="_on_settings_changed"]
+[connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay/FileSearch" method="_on_main_panel_settings_changed"]
+[connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands" method="_on_settings_changed"]
+[connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Palette" method="_on_settings_changed"]
+[connection signal="settings_changed" from="." to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors" method="_on_settings_changed"]
+[connection signal="id_pressed" from="VBoxContainer/NavBar/File" to="VBoxContainer/NavBar/File" method="_on_id_pressed"]
+[connection signal="new_file" from="VBoxContainer/NavBar/File" to="VBoxContainer/NavBar" method="_on_new_file"]
+[connection signal="text_changed" from="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay/FileSearch" to="VBoxContainer/HSplitContainer/LeftPanel/FileDisplay" method="_on_file_search_text_changed"]
+[connection signal="pressed" from="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands/HBoxContainer/AddColor" to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/PaletteCommands" method="_on_add_color_pressed"]
+[connection signal="left_click" from="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Palette" to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors" method="_on_palette_left_click"]
+[connection signal="right_click" from="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Palette" to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors" method="_on_palette_right_click"]
+[connection signal="color_changed" from="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer/HBoxContainer/ForegroundColorPicker" to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors" method="_on_foreground_color_picker_color_changed"]
+[connection signal="pressed" from="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer/HBoxContainer/ForegroundAddColorButton" to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors" method="_on_foreground_add_color_button_pressed"]
+[connection signal="color_changed" from="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer/HBoxContainer2/BackgroundColorPicker" to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors" method="_on_background_color_picker_color_changed"]
+[connection signal="pressed" from="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors/VBoxContainer/HBoxContainer2/BackgroundAddColorButton" to="VBoxContainer/HSplitContainer/LeftPanel/PaletteContainer/Colors" method="_on_background_add_color_button_pressed"]
+[connection signal="confirmed" from="NewFileDialog" to="NewFileDialog" method="_on_confirmed"]
+[connection signal="size_confirmed" from="NewFileDialog" to="VBoxContainer/NavBar" method="_on_new_file_dialog_size_confirmed"]

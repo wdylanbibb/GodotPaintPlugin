@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=3 uid="uid://chmoybyjspees"]
+
+[ext_resource type="Script" path="res://addons/godot_paint/UI/CanvasContainer/Canvas.gd" id="1_gtfc1"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/CanvasContainer/CanvasContainer.gd" id="1_ll8sd"]
+[ext_resource type="Script" path="res://addons/godot_paint/UI/CanvasContainer/TextureRect.gd" id="3_hlvbx"]
+
+[sub_resource type="Image" id="Image_n0pvt"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 131, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 128, 128, 4, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 93, 93, 55, 255, 97, 97, 58, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 97, 97, 42, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 98, 98, 47, 255, 97, 97, 42, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 93, 93, 233, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 94, 94, 46, 255, 93, 93, 236, 255, 93, 93, 233, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 93, 93, 252, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_dhwgv"]
+image = SubResource("Image_n0pvt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47uf4"]
+
+[node name="CanvasContainer" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_ll8sd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 1136.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+
+[node name="Canvas" type="Panel" parent="VBoxContainer"]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 2
+offset_right = 1136.0
+offset_bottom = 636.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 7
+script = ExtResource("1_gtfc1")
+
+[node name="CanvasTexture" type="TextureRect" parent="VBoxContainer/Canvas"]
+texture_filter = 1
+layout_mode = 0
+script = ExtResource("3_hlvbx")
+
+[node name="ZoomControls" type="MarginContainer" parent="VBoxContainer/Canvas"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Canvas/ZoomControls"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 124.0
+offset_bottom = 39.0
+
+[node name="ZoomOut" type="Button" parent="VBoxContainer/Canvas/ZoomControls/HBoxContainer"]
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 31.0
+focus_mode = 0
+icon = SubResource("ImageTexture_dhwgv")
+flat = true
+
+[node name="ZoomReset" type="Button" parent="VBoxContainer/Canvas/ZoomControls/HBoxContainer"]
+custom_minimum_size = Vector2i(60, 0)
+layout_mode = 2
+offset_left = 28.0
+offset_right = 88.0
+offset_bottom = 31.0
+focus_mode = 0
+text = "100 %"
+flat = true
+icon_alignment = 1
+
+[node name="ZoomIn" type="Button" parent="VBoxContainer/Canvas/ZoomControls/HBoxContainer"]
+layout_mode = 2
+offset_left = 92.0
+offset_right = 116.0
+offset_bottom = 31.0
+focus_mode = 0
+icon = SubResource("ImageTexture_dhwgv")
+flat = true
+
+[node name="HScrollBar" type="HScrollBar" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_top = 640.0
+offset_right = 1136.0
+offset_bottom = 648.0
+max_value = 1136.0
+page = 16.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 1140.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VScrollBar" type="VScrollBar" parent="VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 4.0
+offset_right = 12.0
+offset_bottom = 632.0
+size_flags_horizontal = 8
+size_flags_vertical = 3
+max_value = 636.0
+page = 16.0
+
+[node name="Panel" type="Panel" parent="VBoxContainer2"]
+custom_minimum_size = Vector2i(12, 12)
+layout_mode = 2
+offset_top = 636.0
+offset_right = 12.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_47uf4")
+
+[connection signal="gui_input" from="VBoxContainer/Canvas" to="VBoxContainer/Canvas" method="_on_canvas_gui_input"]
+[connection signal="resized" from="VBoxContainer/Canvas" to="VBoxContainer/Canvas" method="_on_canvas_resized"]
+[connection signal="gui_input" from="VBoxContainer/Canvas/CanvasTexture" to="VBoxContainer/Canvas/CanvasTexture" method="_on_texture_rect_gui_input"]
+[connection signal="pressed" from="VBoxContainer/Canvas/ZoomControls/HBoxContainer/ZoomOut" to="VBoxContainer/Canvas" method="_zoom_out"]
+[connection signal="pressed" from="VBoxContainer/Canvas/ZoomControls/HBoxContainer/ZoomReset" to="VBoxContainer/Canvas" method="_zoom_reset"]
+[connection signal="pressed" from="VBoxContainer/Canvas/ZoomControls/HBoxContainer/ZoomIn" to="VBoxContainer/Canvas" method="_zoom_in"]
+[connection signal="scrolling" from="VBoxContainer/HScrollBar" to="VBoxContainer/Canvas" method="_on_h_scroll_bar_scrolling"]
+[connection signal="scrolling" from="VBoxContainer2/VScrollBar" to="VBoxContainer/Canvas" method="_on_v_scroll_bar_scrolling"]

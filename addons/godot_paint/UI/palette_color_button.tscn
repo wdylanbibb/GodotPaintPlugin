@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://tm5weq62vj3r"]
+
+[ext_resource type="Script" path="res://addons/godot_paint/UI/PaletteColorButton.gd" id="1_0tk6x"]
+
+[sub_resource type="Gradient" id="Gradient_7y7qr"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_unk0g"]
+gradient = SubResource("Gradient_7y7qr")
+width = 16
+height = 16
+
+[node name="PaletteColorButton" type="Button"]
+offset_right = 24.0
+offset_bottom = 24.0
+button_mask = 3
+icon = SubResource("GradientTexture2D_unk0g")
+script = ExtResource("1_0tk6x")
+
+[connection signal="gui_input" from="." to="." method="_on_palette_color_button_gui_input"]
